@@ -3,6 +3,7 @@ package cn.acyou.pandora.user.controller;
 import cn.acyou.pandora.entity.Student;
 import cn.acyou.pandora.service.OrderCommonService;
 import cn.acyou.pandora.service.StudentService;
+import cn.acyou.pandora.util.RandomValue;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang.RandomStringUtils;
 import org.apache.commons.lang.math.RandomUtils;
@@ -43,10 +44,10 @@ public class HelloWordController {
     public Object addStudent(){
         //执行本地方法
         Student student = new Student();
-        student.setName(RandomStringUtils.random(3));
+        student.setName(RandomValue.getName());
         student.setAge(RandomUtils.nextInt(100));
-        student.setBirth(new Date());
+        student.setBirth(RandomValue.randomDate());
         studentService.addStudent(student);
-        return "hello";
+        return student;
     }
 }
