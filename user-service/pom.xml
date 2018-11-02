@@ -10,6 +10,18 @@
     </parent>
     <artifactId>user-service</artifactId>
     <version>0.0.1-SNAPSHOT</version>
+    <dependencies>
+        <dependency>
+            <groupId>cn.acyou.pandora</groupId>
+            <artifactId>user-dao</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>cn.acyou.pandora</groupId>
+            <artifactId>pandora-client</artifactId>
+            <version>${project.version}</version>
+        </dependency>
 
+    </dependencies>
     
 </project>
